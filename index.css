@@ -82,3 +82,10 @@ body {
   margin-top: 20px;
   font-weight: bold;
 }
+
+.resume__visitors-count {
+  font-weight: bold;
+  color: aqua;
+  margin-top: 50px;
+  font-size: 26px;
+}
