@@ -20,7 +20,7 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
       - name: Sync files with S3
         run: |
-          aws-vault exec tiger-cloud-challenge -- aws s3 sync ./ s3://tiger-static-resume/ --exclude "*" --include "index*"
+          aws s3 sync ./ s3://tiger-static-resume/ --exclude "*" --include "index*"
       - name: Invalidate cloudfront distribution
         run: |
           aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
