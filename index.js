@@ -3,9 +3,7 @@ const visitorCountTextElement = document.querySelector(
 );
 
 document.addEventListener("DOMContentLoaded", async () => {
-  const response = await fetch(
-    "https://olvmn27mjxhmzollt2whn7ecie0brzqu.lambda-url.eu-west-3.on.aws/"
-  );
+  const response = await fetch("lambda_url");
 
   const count = await response.json();
 
