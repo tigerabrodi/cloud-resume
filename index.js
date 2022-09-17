@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     "https://olvmn27mjxhmzollt2whn7ecie0brzqu.lambda-url.eu-west-3.on.aws/"
   );
 
-  const data = await response.json();
+  const count = await response.json();
 
-  visitorCountTextElement.textContent = `${visitorCountTextElement.textContent} ${data}`;
+  visitorCountTextElement.textContent = `${visitorCountTextElement.textContent} ${count}`;
 });
